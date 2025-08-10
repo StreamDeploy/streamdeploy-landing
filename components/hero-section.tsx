@@ -33,12 +33,12 @@ export default function HeroSection({
           </div>
           <div className="mt-8 flex items-center justify-center gap-3">
             <Button asChild className="bg-emerald-500 hover:bg-emerald-600 text-white">
-              <a href="#marketplace" aria-label="Browse Marketplace">
+              <a href="/marketplace" aria-label="Browse Marketplace">
                 Browse Marketplace
               </a>
             </Button>
             <Button asChild variant="outline" className="border-sky-500 text-sky-600 hover:bg-sky-50 bg-transparent">
-              <a href="#cta" aria-label="Start Deploying">
+              <a href="/marketplace/contact" aria-label="Start Deploying">
                 Start Deploying
               </a>
             </Button>

@@ -22,12 +22,12 @@ export default function CtaBanner({
           </div>
           <div className="flex items-center gap-3 md:justify-end">
             <Button asChild className="bg-white text-emerald-600 hover:bg-white/90">
-              <a href="#marketplace" aria-label="Browse Marketplace">
+              <a href="/marketplace" aria-label="Browse Marketplace">
                 Browse Marketplace
               </a>
             </Button>
             <Button asChild variant="secondary" className="bg-white/10 text-white hover:bg-white/20">
-              <a href="#cta" aria-label="Deploy Now">
+              <a href="/marketplace/contact" aria-label="Deploy Now">
                 Deploy Now
               </a>
             </Button>

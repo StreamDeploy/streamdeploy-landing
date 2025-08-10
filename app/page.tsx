@@ -92,7 +92,7 @@ export default function Page() {
             >
               Validation
             </Link>
-            <Link href="#cta" className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+            <Link href="/marketplace/contact" className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
               Get started
             </Link>
           </nav>
