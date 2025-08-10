@@ -37,7 +37,7 @@ jobs:
 
       - name: Build Next.js static site
         env:
-          NEXT_BASE_PATH: /streamdeploy-landing
+          NEXT_ASSET_PREFIX: /streamdeploy-landing
         run: pnpm build
 
       - name: Prepare Pages artifacts (.nojekyll + CNAME)
