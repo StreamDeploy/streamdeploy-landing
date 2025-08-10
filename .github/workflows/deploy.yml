@@ -43,7 +43,7 @@ jobs:
 
       - name: Build Next.js static site (relative assets for custom domain)
         env:
-          NEXT_ASSET_PREFIX: .
+          NEXT_ASSET_PREFIX: /
         run: pnpm build
 
       - name: Prepare Pages artifact (.nojekyll + CNAME)
