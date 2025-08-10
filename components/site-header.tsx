@@ -7,7 +7,7 @@ import { useState } from "react"
 
 export default function SiteHeader({
   logo = "StreamDeploy",
-  ctaPrimaryHref = "#marketplace",
+  ctaPrimaryHref = "/marketplace",
   ctaSecondaryHref = "#cta",
 }: {
   logo?: string
@@ -48,11 +48,11 @@ export default function SiteHeader({
             Validation
           </Link>
           <div className="flex items-center gap-2">
-            <Button asChild className="bg-emerald-500 hover:bg-emerald-600 text-white">
-              <Link href={ctaPrimaryHref} aria-label="Browse Marketplace">
-                Browse Marketplace
-              </Link>
-            </Button>
+              <Button asChild className="bg-emerald-500 hover:bg-emerald-600 text-white">
+                <Link href={ctaPrimaryHref} aria-label="Browse Marketplace">
+                  Browse Marketplace
+                </Link>
+              </Button>
             <Button asChild variant="outline" className="border-sky-500 text-sky-600 hover:bg-sky-50 bg-transparent">
               <Link href={ctaSecondaryHref} aria-label="Start Deploying">
                 Start Deploying
@@ -85,7 +85,7 @@ export default function SiteHeader({
             </Link>
             <div className="mt-2 flex items-center gap-2">
               <Button asChild className="bg-emerald-500 hover:bg-emerald-600 text-white flex-1">
-                <Link href="#marketplace" onClick={() => setOpen(false)}>
+                <Link href="/marketplace" onClick={() => setOpen(false)}>
                   Browse Marketplace
                 </Link>
               </Button>
