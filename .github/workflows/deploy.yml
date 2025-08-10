@@ -36,6 +36,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build Next.js static site
+        env:
+          NEXT_BASE_PATH: /streamdeploy-landing
         run: pnpm build
 
       - name: Prepare Pages artifacts (.nojekyll + CNAME)
