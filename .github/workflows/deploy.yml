@@ -37,13 +37,13 @@ jobs:
 
       - name: Build Next.js static site
         env:
-          NEXT_ASSET_PREFIX: /streamdeploy-landing
+          NEXT_ASSET_PREFIX: .
         run: pnpm build
 
       - name: Prepare Pages artifacts (.nojekyll + CNAME)
         run: |
           touch out/.nojekyll
-          echo "streamdeploy.com" > out/CNAME
+          cp CNAME out/CNAME
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
