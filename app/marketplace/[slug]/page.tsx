@@ -10,11 +10,12 @@ import { getContainerBySlug, containers } from "@/data/marketplace"
 import { Cpu, ExternalLink } from "lucide-react"
 
 type PageProps = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const c = getContainerBySlug(params.slug)
+  const { slug } = await params
+  const c = getContainerBySlug(slug)
   if (!c) return { title: "Container not found — StreamDeploy Marketplace" }
   return {
     title: `${c.name} — StreamDeploy Marketplace`,
@@ -27,8 +28,9 @@ export function generateStaticParams() {
   return containers.map((c) => ({ slug: c.slug }))
 }
 
-export default function ContainerDetailPage({ params }: PageProps) {
-  const c = getContainerBySlug(params.slug)
+export default async function ContainerDetailPage({ params }: PageProps) {
+  const { slug } = await params
+  const c = getContainerBySlug(slug)
   if (!c) return notFound()
 
   return (

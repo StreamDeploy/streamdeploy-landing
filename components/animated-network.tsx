@@ -13,10 +13,8 @@ export default function AnimatedNetwork({
   const nodesRef = useRef<Node[]>([])
 
   useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-    const ctx = canvas.getContext("2d")
-    if (!ctx) return
+    const canvas = canvasRef.current!
+    const ctx = canvas.getContext("2d")!
 
     const dpr = Math.max(1, window.devicePixelRatio || 1)
 
