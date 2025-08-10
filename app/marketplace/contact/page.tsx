@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Suspense } from "react"
 import SiteHeader from "@/components/site-header"
 import ContactForm from "@/components/marketplace/contact-form"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -28,7 +29,9 @@ export default function ContactPage() {
                 <CardTitle className="text-base">Contact details</CardTitle>
               </CardHeader>
               <CardContent>
-                <ContactForm />
+                <Suspense fallback={<div className="text-sm text-gray-500">Loading form…</div>}>
+                  <ContactForm />
+                </Suspense>
               </CardContent>
             </Card>
             <p className="mt-4 text-center text-xs text-gray-600 dark:text-gray-400">
