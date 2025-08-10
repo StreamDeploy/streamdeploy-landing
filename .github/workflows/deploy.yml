@@ -32,21 +32,24 @@ jobs:
           node-version: 20
           cache: pnpm
 
+      # Configure Pages early so the action can auto-patch Next.js for Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          static_site_generator: next
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build Next.js static site
+      - name: Build Next.js static site (relative assets for custom domain)
         env:
           NEXT_ASSET_PREFIX: .
         run: pnpm build
 
-      - name: Prepare Pages artifacts (.nojekyll + CNAME)
+      - name: Prepare Pages artifact (.nojekyll + CNAME)
         run: |
           touch out/.nojekyll
           cp CNAME out/CNAME
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
