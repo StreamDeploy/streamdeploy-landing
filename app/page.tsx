@@ -72,22 +72,22 @@ export default function Page() {
           </p>
           <nav className="flex items-center gap-6 text-sm">
             <Link
-              href="#how-it-works"
+              href="/#how-it-works"
               className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
             >
               How it works
             </Link>
             <Link
-              href="#showcase"
+              href="/#showcase"
               className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
             >
               Orin Showcase
             </Link>
-            <Link href="#why" className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+            <Link href="/#why" className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
               Why StreamDeploy
             </Link>
             <Link
-              href="#validation"
+              href="/#validation"
               className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
             >
               Validation
