@@ -1,0 +1,20 @@
+{
+	"name": "landing",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "node:24-alpine",
+	"forwardPorts": [
+		3001
+	],
+	"portsAttributes": {
+		"3001": {
+			"label": "landing"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"saoudrizwan.claude-dev"
+			]
+		}
+	}
+}

@@ -27,7 +27,7 @@ export default function CtaBanner({
               </a>
             </Button>
             <Button asChild variant="secondary" className="bg-white/10 text-white hover:bg-white/20">
-              <a href="/marketplace/contact" aria-label="Deploy Now">
+              <a href="app.streamdeploy/signin" aria-label="Deploy Now">
                 Deploy Now
               </a>
             </Button>
