@@ -9,6 +9,7 @@
 
 # production
 /build
+/.pnpm-store
 
 # debug
 npm-debug.log*
