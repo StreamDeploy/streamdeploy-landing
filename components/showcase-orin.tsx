@@ -43,7 +43,7 @@ export default function ShowcaseOrin() {
           </ul>
           <div className="mt-6 flex items-center gap-3">
             <Button asChild className="bg-emerald-500 hover:bg-emerald-600 text-white">
-              <a href="#marketplace">Browse Marketplace</a>
+              <a href="/marketplace">Browse Marketplace</a>
             </Button>
             <Button asChild variant="outline" className="border-sky-500 text-sky-600 hover:bg-sky-50 bg-transparent">
               <a href="https://github.com/streamdeploy/example-robot-docker" target="_blank" rel="noreferrer">

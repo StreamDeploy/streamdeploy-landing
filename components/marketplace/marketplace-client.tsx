@@ -13,6 +13,10 @@ const PLATFORM_FILTERS = [
   { id: "amd64", label: "amd64" },
   { id: "jetson", label: "Jetson" },
   { id: "coral", label: "Coral" },
+  { id: "rk3588", label: "RK3588" },
+  { id: "raspberrypi", label: "Raspberry Pi" },
+  // { id: "beaglebone", label: "BeagleBone" },
+  // { id: "arduino", label: "Arduino" },
 ] as const
 
 export default function MarketplaceClient({ intro }: { intro: string }) {
@@ -31,6 +35,26 @@ export default function MarketplaceClient({ intro }: { intro: string }) {
           if (f === "arm64" || f === "amd64") return c.architectures.includes(f as "arm64" | "amd64")
           if (f === "jetson") return /jetson|orin/i.test(c.primaryHw) || c.tags.some((t) => /jetson|nvenc/i.test(t))
           if (f === "coral") return /coral/i.test(c.primaryHw) || c.tags.some((t) => /coral|edgetpu/i.test(t))
+          if (f === "rk3588")
+            return (
+              /rk3588|roc-?rk3588|rockchip|orange\s?pi\s?5|radxa|rock\s?-?5/i.test(c.primaryHw) ||
+              c.tags.some((t) => /rk3588|rockchip|rkmpp|orange\s?pi|radxa/i.test(t))
+            )
+          if (f === "raspberrypi")
+            return (
+              /raspberry\s?pi|raspi|\brpi\b|\bpi\s?[45]\b|compute\s?module|cm[45]\b/i.test(c.primaryHw) ||
+              c.tags.some((t) => /raspberry\s?pi|raspi|\brpi\b|cm[45]\b/i.test(t))
+            )
+          if (f === "beaglebone")
+            return (
+              /beaglebone|beagleboard|\bbbb\b|am335x/i.test(c.primaryHw) ||
+              c.tags.some((t) => /beaglebone|beagleboard|\bbbb\b|am335x/i.test(t))
+            )
+          if (f === "arduino")
+            return (
+              /arduino|\buno\b|\bmega\b|\bnano\b/i.test(c.primaryHw) ||
+              c.tags.some((t) => /arduino|\buno\b|\bmega\b|\bnano\b/i.test(t))
+            )
           return false
         })
       return matchesText && matchesFilters

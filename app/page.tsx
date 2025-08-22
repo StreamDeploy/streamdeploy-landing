@@ -34,7 +34,7 @@ export default function Page() {
           <div className="mx-auto mb-10 max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">How StreamDeploy Works</h2>
             <p className="mt-3 text-gray-600 dark:text-gray-300">
-              From curated containers to zero‑downtime OTA, purpose‑built for NVIDIA Jetson Orin and robotics fleets.
+              From curated containers to seamless OTA rollouts, StreamDeploy brings zero-downtime to edge AI hardware—NVIDIA Orin, ROC-RK3588, Coral TPU—and the robotics fleets of tomorrow.
             </p>
           </div>
           <Steps />
