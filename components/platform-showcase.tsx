@@ -191,8 +191,8 @@ export default function PlatformShowcase() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.2, delay: 0.2 }}
               >
-                <pre className="overflow-auto rounded-md bg-gradient-to-br from-neutral-950 to-neutral-900 p-4 text-sm text-emerald-100 border border-emerald-800/30">
-                  <code>{snippet}</code>
+                <pre className="overflow-x-auto rounded-md bg-gradient-to-br from-neutral-950 to-neutral-900 p-3 sm:p-4 text-xs sm:text-sm text-emerald-100 border border-emerald-800/30 max-w-full">
+                  <code className="whitespace-pre-wrap break-all sm:whitespace-pre sm:break-normal">{snippet}</code>
                 </pre>
               </motion.div>
               
