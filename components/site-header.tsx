@@ -2,36 +2,44 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Cpu } from "lucide-react"
+import { Rocket } from "lucide-react"
 import { useState } from "react"
 import { motion } from "motion/react"
 
 export default function SiteHeader({
-  logo = "StreamDeploy",
   ctaPrimaryHref = "/marketplace",
   ctaSecondaryHref = "https://app.streamdeploy.com/signin",
 }: {
-  logo?: string
   ctaPrimaryHref?: string
   ctaSecondaryHref?: string
 }) {
   const [open, setOpen] = useState(false)
-  
+
   return (
     <motion.header className="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur-md dark:bg-neutral-950/80 shadow-sm">
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <Link href="/" className="flex items-center gap-2 group">
           <motion.div
-            whileHover={{ rotate: 360 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
+            whileHover={{
+              x: [0, 20, 20, -20, -20, 20],
+              y: [0, -20, -20, 20, 20, -20],
+              opacity: [1, 0, 0, 1, 1, 0],
+              rotate: [0, -45, -45, 135, 135, -45]
+            }}
+            transition={{ 
+              duration: 2.4, 
+              ease: "easeInOut",
+              times: [0, 0.25, 0.4, 0.5, 0.75, 1]
+            }}
           >
-            <Cpu className="h-6 w-6 text-emerald-500 group-hover:text-emerald-600 transition-colors" />
+            <Rocket className="h-6 w-6 text-emerald-500 group-hover:text-emerald-600 transition-colors" />
           </motion.div>
+
           <span className="font-semibold tracking-tight text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-            {logo}
+            StreamDeploy
           </span>
         </Link>
-        
+
         <nav className="hidden items-center gap-6 md:flex">
           <motion.div whileHover={{ y: -2 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
             <Link
@@ -65,15 +73,15 @@ export default function SiteHeader({
               Validation
             </Link>
           </motion.div>
-          
+
           <div className="flex items-center gap-2 ml-4">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <Button 
-                asChild 
+              <Button
+                asChild
                 className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white shadow-md shadow-emerald-500/25 border-0"
               >
                 <Link href={ctaPrimaryHref} aria-label="Browse Marketplace">
@@ -81,15 +89,15 @@ export default function SiteHeader({
                 </Link>
               </Button>
             </motion.div>
-            
+
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <Button 
-                asChild 
-                variant="outline" 
+              <Button
+                asChild
+                variant="outline"
                 className="border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 hover:text-emerald-700 dark:border-emerald-400 dark:text-emerald-400 dark:hover:bg-emerald-950/30 dark:hover:text-emerald-300 bg-white/80"
               >
                 <Link href={ctaSecondaryHref} aria-label="Start Deploying">
@@ -99,7 +107,7 @@ export default function SiteHeader({
             </motion.div>
           </div>
         </nav>
-        
+
         <motion.button
           aria-label="Toggle Menu"
           onClick={() => setOpen((v) => !v)}
@@ -110,9 +118,9 @@ export default function SiteHeader({
           {open ? "Close" : "Menu"}
         </motion.button>
       </div>
-      
+
       {open && (
-        <motion.div 
+        <motion.div
           className="md:hidden border-t border-emerald-100 bg-white/95 backdrop-blur-md dark:bg-neutral-950/95 dark:border-emerald-900"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
@@ -125,65 +133,65 @@ export default function SiteHeader({
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.1 }}
             >
-              <Link 
-                href="/#how-it-works" 
-                onClick={() => setOpen(false)} 
+              <Link
+                href="/#how-it-works"
+                onClick={() => setOpen(false)}
                 className="py-2 text-gray-700 hover:text-emerald-600 dark:text-gray-300 dark:hover:text-emerald-400 transition-colors font-medium block"
               >
                 How it works
               </Link>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.15 }}
             >
-              <Link 
-                href="/#showcase" 
-                onClick={() => setOpen(false)} 
+              <Link
+                href="/#showcase"
+                onClick={() => setOpen(false)}
                 className="py-2 text-gray-700 hover:text-emerald-600 dark:text-gray-300 dark:hover:text-emerald-400 transition-colors font-medium block"
               >
                 Orin Showcase
               </Link>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <Link 
-                href="/#why" 
-                onClick={() => setOpen(false)} 
+              <Link
+                href="/#why"
+                onClick={() => setOpen(false)}
                 className="py-2 text-gray-700 hover:text-emerald-600 dark:text-gray-300 dark:hover:text-emerald-400 transition-colors font-medium block"
               >
                 Why
               </Link>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.25 }}
             >
-              <Link 
-                href="/#validation" 
-                onClick={() => setOpen(false)} 
+              <Link
+                href="/#validation"
+                onClick={() => setOpen(false)}
                 className="py-2 text-gray-700 hover:text-emerald-600 dark:text-gray-300 dark:hover:text-emerald-400 transition-colors font-medium block"
               >
                 Validation
               </Link>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="mt-4 flex items-center gap-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.3 }}
             >
-              <Button 
-                asChild 
+              <Button
+                asChild
                 className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white flex-1 shadow-md shadow-emerald-500/25"
               >
                 <Link href="/marketplace" onClick={() => setOpen(false)}>
