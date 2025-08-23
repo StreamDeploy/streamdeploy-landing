@@ -3,26 +3,11 @@ import Link from "next/link"
 import SiteHeader from "@/components/site-header"
 import HeroSection from "@/components/hero-section"
 import Steps from "@/components/steps"
-import ShowcaseOrin from "@/components/showcase-orin"
+import PlatformShowcase from "@/components/platform-showcase"
 import WhyStreamDeploy from "@/components/why-streamdeploy"
 import SocialProof from "@/components/social-proof"
 import CtaBanner from "@/components/cta-banner"
 
-export const metadata: Metadata = {
-  title: "StreamDeploy — Deploy Anywhere, Every Time",
-  description:
-    "StreamDeploy is the container marketplace + OTA platform for NVIDIA Orins, robotics fleets, and edge AI. Deploy once, update fleets instantly, and roll back in seconds — driver-safe and fleet-ready.",
-  keywords: [
-    "fleet deployment",
-    "NVIDIA Orin containers",
-    "robot OTA updates",
-    "container marketplace",
-    "Jetson fleet management",
-    "edge AI deployment",
-    "OTA updates",
-  ],
-  alternates: { canonical: "/" },
-}
 
 export default function Page() {
   return (
@@ -34,7 +19,7 @@ export default function Page() {
           <div className="mx-auto mb-10 max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">How StreamDeploy Works</h2>
             <p className="mt-3 text-gray-600 dark:text-gray-300">
-              From curated containers to seamless OTA rollouts, StreamDeploy brings zero-downtime to edge AI hardware—NVIDIA Orin, ROC-RK3588, Coral TPU—and the robotics fleets of tomorrow.
+              From curated containers to seamless OTA rollouts, StreamDeploy brings zero-downtime to edge AI hardware and robotics fleets across diverse platforms.
             </p>
           </div>
           <Steps />
@@ -43,7 +28,7 @@ export default function Page() {
 
       <section id="showcase" className="relative py-20 bg-gray-50 dark:bg-neutral-900/60">
         <div className="container mx-auto px-4">
-          <ShowcaseOrin />
+          <PlatformShowcase />
         </div>
       </section>
 
@@ -81,7 +66,7 @@ export default function Page() {
               href="/#showcase"
               className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
             >
-              Orin Showcase
+              Platform Showcase
             </Link>
             <Link href="/#why" className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
               Why StreamDeploy
