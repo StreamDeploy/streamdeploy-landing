@@ -6,15 +6,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ShieldCheck, Cpu, Network, TerminalSquare } from "lucide-react"
 import { motion } from "motion/react"
 
-const snippet = `# example-robot-docker
-# StreamDeploy device enrollment for edge AI platform
+const snippet = `# StreamDeploy device enrollment for edge AI platform
 # Device Type: JETSON ORIN-NANO
 # Operating System: Linux
 # Group: production
 
-export SD_BOOTSTRAP_TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4MDM5YTYwOS00NTIxLTQ5ZWUtODhjYS1jYTIxOGE1MzU5Y2QiLCJvcmdfaWQiOiJhODIyZmM1Yi01MGFjLTRlNjktYjFjMy01NWRmNjMyN2RkOGIiLCJncm91cF9pZCI6ImJhN2I3YzI4LWQwZDEtNGI3NS04ZTAyLWYyMDU3MTk1NDQ0YyIsImRldmljZV9pZCI6ImU4YzIwMGQ1LWJmY2YtNGNlOC1hZWQ2LTE0M2ZmY2ZjOTFjZCIsImlhdCI6MTc1NTkxMjk1NCwiZXhwIjoxNzU1OTE0NzU0LCJzY29wZSI6ImJvb3RzdHJhcCJ9.VNaEixwlSHTjX-2M5bYKd8MIwiViclLYV6zOmjeYo5s"
+export SD_TOKEN=<your-token>
 # Example installer
-curl -fsSL https://get.streamdeploy.com/orin-nano-install.sh | bash -s -- --token "$SD_BOOTSTRAP_TOKEN"
+curl -fsSL https://get.streamdeploy.com/orin-nano-install.sh | bash -s -- --token "$SD_TOKEN"
 `
 
 export default function PlatformShowcase() {
@@ -119,21 +118,6 @@ export default function PlatformShowcase() {
               </Button>
             </motion.div>
             
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <Button 
-                asChild 
-                variant="outline" 
-                className="border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 hover:text-emerald-700 dark:border-emerald-400 dark:text-emerald-400 dark:hover:bg-emerald-950/30 dark:hover:text-emerald-300 bg-white/80"
-              >
-                <a href="https://github.com/streamdeploy/example-robot-docker" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
-              </Button>
-            </motion.div>
           </motion.div>
         </motion.div>
         
@@ -160,7 +144,7 @@ export default function PlatformShowcase() {
                 >
                   <TerminalSquare className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
                 </motion.div>
-                <CardTitle className="text-base text-gray-900 dark:text-white">example-robot-docker</CardTitle>
+                <CardTitle className="text-base text-gray-900 dark:text-white">Streamlined Device Setup</CardTitle>
               </div>
               
               <motion.div
@@ -203,7 +187,7 @@ export default function PlatformShowcase() {
                 transition={{ duration: 0.2, delay: 0.25 }}
               >
                 <CardDescription className="mt-3 text-gray-600 dark:text-gray-300">
-                  Monospace output is illustrative. Replace fleet name, image tags, and configs for your environment.
+                  Monospace output is illustrative.
                 </CardDescription>
               </motion.div>
             </CardContent>
