@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Particles } from "@/components/magicui/particles"
 import { Highlight } from "@/components/magicui/highlight"
 import { motion } from "motion/react"
+import InteractiveGridPattern from "@/components/interactive-grid-pattern"
 
 export default function HeroSection({
   headline = "StreamDeploy — Just Push It",
@@ -16,16 +17,13 @@ export default function HeroSection({
 }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-100 via-emerald-50 to-green-100 dark:from-neutral-950 dark:via-emerald-950/40 dark:to-green-950/30 min-h-screen flex items-center">
-      {/* Professional grid pattern background */}
-      <div className="absolute inset-0 pointer-events-none opacity-60 dark:opacity-30">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            linear-gradient(rgba(16, 185, 129, 0.2) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(16, 185, 129, 0.2) 1px, transparent 1px)
-          `,
-          backgroundSize: '40px 40px'
-        }} />
-      </div>
+      {/* Interactive Grid Pattern background */}
+      <InteractiveGridPattern 
+        className="opacity-60 dark:opacity-30"
+        gridSize={40}
+        strokeWidth={1}
+        fadeDistance={250}
+      />
       
       {/* Additional background pattern for depth */}
       <div className="absolute inset-0 pointer-events-none opacity-20 dark:opacity-10">
