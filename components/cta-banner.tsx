@@ -133,7 +133,7 @@ export default function CtaBanner({
                 variant="secondary" 
                 className="bg-white/10 text-white hover:bg-white/20 border border-white/20 font-semibold backdrop-blur-sm"
               >
-                <a href="app.streamdeploy/signin" aria-label="Deploy Now">
+                <a href="http://app.streamdeploy/signin" aria-label="Deploy Now">
                   Deploy Now
                 </a>
               </Button>
