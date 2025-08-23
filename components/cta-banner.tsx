@@ -16,7 +16,7 @@ export default function CtaBanner({
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
     >
       {/* Animated particles background */}
       <div className="absolute inset-0 pointer-events-none">
@@ -79,14 +79,14 @@ export default function CtaBanner({
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.2, delay: 0.1 }}
           >
             <motion.h3 
               className="text-2xl sm:text-3xl font-bold leading-tight"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.2, delay: 0.15 }}
             >
               {title}
             </motion.h3>
@@ -95,7 +95,7 @@ export default function CtaBanner({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              transition={{ duration: 0.2, delay: 0.2 }}
             >
               Browse curated containers and deploy to your fleet with driver‑safe OTA updates.
             </motion.p>
@@ -106,7 +106,7 @@ export default function CtaBanner({
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.2, delay: 0.15 }}
           >
             <motion.div
               whileHover={{ scale: 1.05 }}

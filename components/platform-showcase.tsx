@@ -45,14 +45,14 @@ export default function PlatformShowcase() {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <motion.h3 
             className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.2, delay: 0.1 }}
           >
             Edge AI Platform Deployment
           </motion.h3>
@@ -61,7 +61,7 @@ export default function PlatformShowcase() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.2, delay: 0.15 }}
           >
             Deploy to robotics fleets and edge devices in minutes — version‑controlled configs, automatic rollback, hardware-safe updates.
             Unlike generic IoT platforms, StreamDeploy is optimized for edge AI workloads and robotics workflows.
@@ -72,7 +72,7 @@ export default function PlatformShowcase() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.2, delay: 0.2 }}
           >
             {features.map((feature, i) => {
               const Icon = feature.icon
@@ -83,7 +83,7 @@ export default function PlatformShowcase() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.8 + feature.delay }}
+                  transition={{ duration: 0.2, delay: 0.25 + feature.delay * 0.5 }}
                   whileHover={{ x: 5 }}
                 >
                   <motion.div
@@ -104,7 +104,7 @@ export default function PlatformShowcase() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 1.2 }}
+            transition={{ duration: 0.2, delay: 0.4 }}
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -141,7 +141,7 @@ export default function PlatformShowcase() {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
         >
           <Card className="overflow-hidden border-2 border-emerald-100 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 bg-white/80 backdrop-blur-sm dark:bg-neutral-900/80 dark:border-emerald-800 dark:hover:border-emerald-700">
             <CardHeader className="flex flex-row items-center justify-between pb-2 relative">
@@ -189,7 +189,7 @@ export default function PlatformShowcase() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                transition={{ duration: 0.2, delay: 0.2 }}
               >
                 <pre className="overflow-auto rounded-md bg-gradient-to-br from-neutral-950 to-neutral-900 p-4 text-sm text-emerald-100 border border-emerald-800/30">
                   <code>{snippet}</code>
@@ -200,7 +200,7 @@ export default function PlatformShowcase() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.6 }}
+                transition={{ duration: 0.2, delay: 0.25 }}
               >
                 <CardDescription className="mt-3 text-gray-600 dark:text-gray-300">
                   Monospace output is illustrative. Replace fleet name, image tags, and configs for your environment.

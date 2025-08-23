@@ -103,7 +103,7 @@ export default function HeroSection({
             className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
           >
             {headline}
           </motion.h1>
@@ -113,7 +113,7 @@ export default function HeroSection({
             className="mt-6 text-xl sm:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.2, delay: 0.1, ease: "easeOut" }}
           >
             {subheadline.includes('<highlight>') ? (
               <>
@@ -133,7 +133,7 @@ export default function HeroSection({
             className="mx-auto mt-8 max-w-3xl text-gray-600 dark:text-gray-300"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.4, ease: "easeOut" }}
+            transition={{ duration: 0.2, delay: 0.2, ease: "easeOut" }}
           >
             <p className="text-lg leading-relaxed">{support}</p>
             
@@ -142,7 +142,7 @@ export default function HeroSection({
                 className="mt-6 inline-flex flex-wrap items-center justify-center gap-4 text-sm"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: 0.6, ease: "easeOut" }}
+                transition={{ duration: 0.2, delay: 0.3, ease: "easeOut" }}
               >
               <motion.li
                 className="rounded-full border-2 border-emerald-200 bg-emerald-50 px-4 py-2 text-emerald-700 dark:border-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300 font-medium"
@@ -173,7 +173,7 @@ export default function HeroSection({
             className="mt-10 flex items-center justify-center gap-4 flex-wrap"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.2, delay: 0.4, ease: "easeOut" }}
           >
             <motion.div
               whileHover={{ scale: 1.05 }}

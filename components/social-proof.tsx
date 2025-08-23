@@ -10,14 +10,14 @@ export default function SocialProof() {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <motion.h3 
             className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.2, delay: 0.1 }}
           >
             Trusted by the growing robotics ecosystem
           </motion.h3>
@@ -26,7 +26,7 @@ export default function SocialProof() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.2, delay: 0.15 }}
           >
             1M+ developers and 6,000+ companies build on Jetson. Existing OTA solutions are fragmented, costly, or not
             GPU‑aware — StreamDeploy bridges that gap with a driver‑safe, robotics‑first platform.
@@ -37,7 +37,7 @@ export default function SocialProof() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.2, delay: 0.2 }}
           >
             <motion.div
               className="relative p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-green-100/50 dark:from-emerald-950/30 dark:to-green-900/20 border border-emerald-200 dark:border-emerald-800"
@@ -74,7 +74,7 @@ export default function SocialProof() {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
         >
           {[...Array(6)].map((_, i) => (
             <motion.div
@@ -84,10 +84,10 @@ export default function SocialProof() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ 
-                duration: 0.5, 
-                delay: 0.4 + i * 0.1,
+                duration: 0.2, 
+                delay: 0.15 + i * 0.05,
                 type: "spring",
-                stiffness: 200
+                stiffness: 300
               }}
             >
               <motion.div

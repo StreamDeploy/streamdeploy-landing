@@ -12,14 +12,14 @@ export default function WhyStreamDeploy() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
       >
         <motion.h3 
           className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.2, delay: 0.1 }}
         >
           Why StreamDeploy
         </motion.h3>
@@ -28,7 +28,7 @@ export default function WhyStreamDeploy() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.2, delay: 0.15 }}
         >
           The container marketplace and OTA platform built for edge AI devices, robotics fleets, and IoT platforms.
         </motion.p>
@@ -98,8 +98,8 @@ function Feature({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ 
-        duration: 0.6, 
-        delay,
+        duration: 0.2, 
+        delay: delay * 0.5,
         ease: "easeOut" 
       }}
     >
@@ -130,7 +130,7 @@ function Feature({
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: delay + 0.2 }}
+              transition={{ duration: 0.2, delay: delay * 0.5 + 0.1 }}
             >
               {title}
             </motion.h4>
@@ -139,7 +139,7 @@ function Feature({
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: delay + 0.3 }}
+              transition={{ duration: 0.2, delay: delay * 0.5 + 0.15 }}
             >
               {desc}
             </motion.p>

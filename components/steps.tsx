@@ -39,8 +39,8 @@ export default function Steps() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ 
-              duration: 0.4, 
-              delay: i * 0.08,
+              duration: 0.2, 
+              delay: i * 0.04,
               ease: "easeOut" 
             }}
             className="h-full"
@@ -61,10 +61,10 @@ export default function Steps() {
                 whileInView={{ scale: 1, rotate: 0 }}
                 viewport={{ once: true }}
                 transition={{ 
-                  duration: 0.4, 
-                  delay: i * 0.08 + 0.2,
+                  duration: 0.2, 
+                  delay: i * 0.04 + 0.1,
                   type: "spring",
-                  stiffness: 300,
+                  stiffness: 400,
                   damping: 15
                 }}
               >
