@@ -6,15 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ShieldCheck, Cpu, Network, TerminalSquare } from "lucide-react"
 import { motion } from "motion/react"
 
-const snippet = `# StreamDeploy device enrollment for edge AI platform
-# Device Type: JETSON ORIN-NANO
-# Operating System: Linux
-# Group: production
-
-export SD_TOKEN=<your-token>
-# Example installer
-curl -fsSL https://get.streamdeploy.com/orin-nano-install.sh | bash -s -- --token "$SD_TOKEN"
-`
+const snippet = `curl -fsSL https://get.streamdeploy.com/streamdeploy-agent-linux-arm64 | sudo env SD_BOOTSTRAP_TOKEN='<token>' sh -c "t=\$(mktemp); cat >\"\$t\"; chmod +x \"\$t\"; \"\$t\""`
 
 export default function PlatformShowcase() {
   const [copied, setCopied] = useState(false)
