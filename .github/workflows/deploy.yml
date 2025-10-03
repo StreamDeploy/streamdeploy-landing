@@ -21,16 +21,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
+          cache: npm
 
       # Configure Pages early so the action can auto-patch Next.js for Pages
       - name: Setup Pages
@@ -39,12 +34,12 @@ jobs:
           static_site_generator: next
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm ci
 
       - name: Build Next.js static site (relative assets for custom domain)
         env:
           NEXT_ASSET_PREFIX: /
-        run: pnpm build
+        run: npm run build
 
       - name: Prepare Pages artifact (.nojekyll + CNAME)
         run: |
