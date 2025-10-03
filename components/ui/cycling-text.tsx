@@ -14,7 +14,7 @@ export function CyclingText({
   words,
   className,
   cycleInterval = 3000,
-  animationDuration = 0.3,
+  animationDuration = 0.1,
 }: CyclingTextProps) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
