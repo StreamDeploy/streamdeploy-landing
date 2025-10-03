@@ -45,10 +45,10 @@ export default function Steps() {
             }}
             className="h-full"
           >
-            <Card className="group relative overflow-hidden border-2 border-emerald-100 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 bg-white/80 backdrop-blur-sm dark:bg-neutral-900/80 dark:border-emerald-800 dark:hover:border-emerald-700 h-full flex flex-col">
+            <Card className="group relative overflow-hidden border-2 border-blue-100 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-white/80 backdrop-blur-sm dark:bg-neutral-900/80 dark:border-blue-800 dark:hover:border-blue-700 h-full flex flex-col">
               {/* Animated background gradient */}
               <motion.div 
-                className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-emerald-50/60 to-green-100/40 dark:from-emerald-950/40 dark:to-green-900/20"
+                className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-blue-50/60 to-blue-100/40 dark:from-blue-950/40 dark:to-blue-900/20"
                 initial={{ scale: 0.9, opacity: 0 }}
                 whileHover={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
@@ -56,7 +56,7 @@ export default function Steps() {
               
               {/* Floating number indicator */}
               <motion.div
-                className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-green-600 text-white text-sm font-bold flex items-center justify-center shadow-lg z-20"
+                className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white text-sm font-bold flex items-center justify-center shadow-lg z-20"
                 initial={{ scale: 0, rotate: -90 }}
                 whileInView={{ scale: 1, rotate: 0 }}
                 viewport={{ once: true }}
@@ -73,7 +73,7 @@ export default function Steps() {
               
               <CardHeader className="flex flex-row items-center gap-3 relative z-10 pb-3">
                 <motion.div 
-                  className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500/20 to-green-500/20 text-emerald-600 dark:text-emerald-400 group-hover:from-emerald-500/30 group-hover:to-green-500/30 transition-all duration-300 flex-shrink-0"
+                  className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-500/20 text-blue-600 dark:text-blue-400 group-hover:from-blue-500/30 group-hover:to-blue-500/30 transition-all duration-300 flex-shrink-0"
                   whileHover={{ 
                     scale: 1.05,
                     rotate: 3,
@@ -82,7 +82,7 @@ export default function Steps() {
                 >
                   <Icon className="h-6 w-6" />
                 </motion.div>
-                <CardTitle className="text-base font-semibold text-gray-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-300 transition-colors leading-tight">
+                <CardTitle className="text-base font-semibold text-gray-900 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors leading-tight">
                   {s.title}
                 </CardTitle>
               </CardHeader>
@@ -95,7 +95,7 @@ export default function Steps() {
               
               {/* Subtle animated accent line */}
               <motion.div
-                className="absolute bottom-0 left-0 bg-gradient-to-r from-emerald-500 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                className="absolute bottom-0 left-0 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 style={{ height: "4px", width: "100%" }}
                 initial={{ scaleX: 0, transformOrigin: "left" }}
                 whileHover={{ scaleX: 1 }}

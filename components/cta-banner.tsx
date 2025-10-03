@@ -12,7 +12,7 @@ export default function CtaBanner({
   return (
     <motion.div
       id="marketplace"
-      className="relative overflow-hidden rounded-2xl border bg-gradient-to-r from-emerald-500 via-green-500 to-emerald-600 p-8 text-white shadow-2xl shadow-emerald-500/25"
+      className="relative overflow-hidden rounded-2xl border bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 p-8 text-white shadow-2xl shadow-blue-500/25"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
@@ -115,7 +115,7 @@ export default function CtaBanner({
             >
               <Button 
                 asChild 
-                className="bg-white text-emerald-600 hover:bg-white/90 font-semibold shadow-lg"
+                className="bg-white text-blue-600 hover:bg-white/90 font-semibold shadow-lg"
               >
                 <a href="/marketplace" aria-label="Browse Marketplace">
                   Browse Marketplace

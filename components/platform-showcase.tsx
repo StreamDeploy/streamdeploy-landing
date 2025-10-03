@@ -78,11 +78,11 @@ export default function PlatformShowcase() {
                   whileHover={{ x: 5 }}
                 >
                   <motion.div
-                    className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500/20 to-green-500/20"
+                    className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500/20 to-blue-500/20"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
-                    <Icon className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                    <Icon className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                   </motion.div>
                   <span className="font-medium">{feature.text}</span>
                 </motion.li>
@@ -104,7 +104,7 @@ export default function PlatformShowcase() {
             >
               <Button 
                 asChild 
-                className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white shadow-lg shadow-emerald-500/25"
+                className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg shadow-blue-500/25"
               >
                 <a href="/marketplace">Browse Marketplace</a>
               </Button>
@@ -119,11 +119,11 @@ export default function PlatformShowcase() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
         >
-          <Card className="overflow-hidden border-2 border-emerald-100 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 bg-white/80 backdrop-blur-sm dark:bg-neutral-900/80 dark:border-emerald-800 dark:hover:border-emerald-700">
+          <Card className="overflow-hidden border-2 border-blue-100 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 bg-white/80 backdrop-blur-sm dark:bg-neutral-900/80 dark:border-blue-800 dark:hover:border-blue-700">
             <CardHeader className="flex flex-row items-center justify-between pb-2 relative">
               {/* Animated background gradient */}
               <motion.div 
-                className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-emerald-50/60 to-green-100/40 dark:from-emerald-950/40 dark:to-green-900/20"
+                className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-blue-50/60 to-blue-100/40 dark:from-blue-950/40 dark:to-blue-900/20"
                 initial={{ scale: 0.8 }}
                 whileHover={{ scale: 1 }}
                 transition={{ duration: 0.3 }}
@@ -134,7 +134,7 @@ export default function PlatformShowcase() {
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6, ease: "easeInOut" }}
                 >
-                  <TerminalSquare className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
+                  <TerminalSquare className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                 </motion.div>
                 <CardTitle className="text-base text-gray-900 dark:text-white">Streamlined Device Setup</CardTitle>
               </div>
@@ -148,7 +148,7 @@ export default function PlatformShowcase() {
                 <Button
                   size="sm"
                   variant="outline"
-                  className="border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 hover:text-emerald-700 dark:border-emerald-400 dark:text-emerald-400 dark:hover:bg-emerald-950/30 bg-white/80"
+                  className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 hover:text-blue-700 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/30 bg-white/80"
                   onClick={async () => {
                     await navigator.clipboard.writeText(snippet)
                     setCopied(true)
@@ -167,7 +167,7 @@ export default function PlatformShowcase() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.2, delay: 0.2 }}
               >
-                <pre className="overflow-x-auto rounded-md bg-gradient-to-br from-neutral-950 to-neutral-900 p-3 sm:p-4 text-xs sm:text-sm text-emerald-100 border border-emerald-800/30 max-w-full">
+                <pre className="overflow-x-auto rounded-md bg-gradient-to-br from-neutral-950 to-neutral-900 p-3 sm:p-4 text-xs sm:text-sm text-blue-100 border border-blue-800/30 max-w-full">
                   <code className="whitespace-pre-wrap break-all sm:whitespace-pre sm:break-normal">{snippet}</code>
                 </pre>
               </motion.div>

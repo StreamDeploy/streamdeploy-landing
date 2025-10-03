@@ -84,68 +84,68 @@ export default function SocialProof() {
           >
             {/* Dev ecosystem */}
             <motion.div
-              className="relative group p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-green-100/50 dark:from-emerald-950/30 dark:to-green-900/20 border border-emerald-200 dark:border-emerald-800"
+              className="relative group p-4 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-950/30 dark:to-blue-900/20 border border-blue-200 dark:border-blue-800"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <dt className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
+              <dt className="text-sm font-medium text-blue-700 dark:text-blue-300">
                 NVIDIA robotics developers
               </dt>
-              <dd className="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mt-1">
+              <dd className="text-3xl font-bold text-blue-600 dark:text-blue-400 mt-1">
                 2M+ devs
               </dd>
-              <p className="mt-1 text-xs text-emerald-700/80 dark:text-emerald-300/80">
+              <p className="mt-1 text-xs text-blue-700/80 dark:text-blue-300/80">
                 Building on Jetson/Orin and the NVIDIA stack.
               </p>
             </motion.div>
 
             {/* Companies on Jetson */}
             <motion.div
-              className="relative group p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-green-100/50 dark:from-emerald-950/30 dark:to-green-900/20 border border-emerald-200 dark:border-emerald-800"
+              className="relative group p-4 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-950/30 dark:to-blue-900/20 border border-blue-200 dark:border-blue-800"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <dt className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
+              <dt className="text-sm font-medium text-blue-700 dark:text-blue-300">
                 Companies using Jetson
               </dt>
-              <dd className="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mt-1">
+              <dd className="text-3xl font-bold text-blue-600 dark:text-blue-400 mt-1">
                 10,000+
               </dd>
-              <p className="mt-1 text-xs text-emerald-700/80 dark:text-emerald-300/80">
+              <p className="mt-1 text-xs text-blue-700/80 dark:text-blue-300/80">
                 From startups to global OEMs.
               </p>
             </motion.div>
 
             {/* Edge AI TAM */}
             <motion.div
-              className="relative group p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-green-100/50 dark:from-emerald-950/30 dark:to-green-900/20 border border-emerald-200 dark:border-emerald-800"
+              className="relative group p-4 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-950/30 dark:to-blue-900/20 border border-blue-200 dark:border-blue-800"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <dt className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
+              <dt className="text-sm font-medium text-blue-700 dark:text-blue-300">
                 Edge-AI market (2030)
               </dt>
-              <dd className="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mt-1">
+              <dd className="text-3xl font-bold text-blue-600 dark:text-blue-400 mt-1">
                 $66B+
               </dd>
-              <p className="mt-1 text-xs text-emerald-700/80 dark:text-emerald-300/80">
+              <p className="mt-1 text-xs text-blue-700/80 dark:text-blue-300/80">
                 High-growth TAM aligned to StreamDeploy.
               </p>
             </motion.div>
 
             {/* Connected devices */}
             <motion.div
-              className="relative group p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-green-100/50 dark:from-emerald-950/30 dark:to-green-900/20 border border-emerald-200 dark:border-emerald-800"
+              className="relative group p-4 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-950/30 dark:to-blue-900/20 border border-blue-200 dark:border-blue-800"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <dt className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
+              <dt className="text-sm font-medium text-blue-700 dark:text-blue-300">
                 IoT/edge devices (2025)
               </dt>
-              <dd className="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mt-1">
+              <dd className="text-3xl font-bold text-blue-600 dark:text-blue-400 mt-1">
                 18B+
               </dd>
-              <p className="mt-1 text-xs text-emerald-700/80 dark:text-emerald-300/80">
+              <p className="mt-1 text-xs text-blue-700/80 dark:text-blue-300/80">
                 Massive fleet surface area for OTA & telemetry.
               </p>
             </motion.div>
@@ -176,7 +176,7 @@ export default function SocialProof() {
               }}
             >
               <motion.div
-                className="relative p-4 rounded-xl bg-white/80 backdrop-blur-sm border-2 border-emerald-100 hover:border-emerald-200 dark:bg-neutral-900/80 dark:border-emerald-800 dark:hover:border-emerald-700 transition-all duration-300"
+                className="relative p-4 rounded-xl bg-white/80 backdrop-blur-sm border-2 border-blue-100 hover:border-blue-200 dark:bg-neutral-900/80 dark:border-blue-800 dark:hover:border-blue-700 transition-all duration-300"
                 whileHover={{
                   scale: 1.05,
                   y: -5,
@@ -194,7 +194,7 @@ export default function SocialProof() {
                   priority={i < 2}
                 />
                 <motion.div
-                  className="absolute inset-0 rounded-xl bg-gradient-to-br from-emerald-50/60 to-green-100/40 dark:from-emerald-950/40 dark:to-green-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-50/60 to-blue-100/40 dark:from-blue-950/40 dark:to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   initial={{ scale: 0.8 }}
                   whileHover={{ scale: 1 }}
                   transition={{ duration: 0.3 }}
