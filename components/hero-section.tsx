@@ -1,49 +1,47 @@
-"use client";
-
-import { Button } from "@/components/ui/button"
-import { Particles } from "@/components/magicui/particles"
-import { Highlight } from "@/components/magicui/highlight"
-import { motion } from "motion/react"
-import { WavyBackground } from "@/components/ui/wavy-background"
-import { CyclingText } from "@/components/ui/cycling-text"
-
 export default function HeroSection({
-  headline = "StreamDeploy — Just Push It",
+  platforms = "edge AI, robotics and IoT",
   subheadline = "deployments feel like web deployments",
   support = "Stop wrestling with network tweaks and manual image loads. With StreamDeploy, you ship once, update fleets instantly, and roll back in seconds — safely.",
 }: {
-  headline?: string
+  platforms?: string
   subheadline?: string
   support?: string
 }) {
   return (
-    <section className="relative min-h-screen flex items-center">
-      <WavyBackground
-        colors={["#38bdf8", "#818cf8", "#c084fc", "#e879f9", "#22d3ee"]}
-        waveWidth={50}
-        blur={10}
-        speed="fast"
-        waveOpacity={0.5}
-        containerClassName="min-h-screen"
-      >
-        <div className="relative z-10 w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-16 sm:pb-20 md:pb-24 lg:pb-28">
-          <div className="w-full text-left">
-            {/* Animated headline */}
-            <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight text-foreground mb-6 leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2, ease: "easeOut" }}
-            >
-              Make <CyclingText 
-                words={["Edge AI devices", "Robotics fleets", "IoT platforms"]}
-                className="text-blue-500 dark:text-blue-400 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl whitespace-nowrap"
-              /> {subheadline}
-            </motion.h1>
-            
-          </div>
+    <section className="relative overflow-hidden border-b bg-white dark:bg-neutral-950">
+      {/* Static engineering grid: depth without motion. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.55] dark:opacity-[0.35]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgb(148 163 184 / 0.14) 1px, transparent 1px)," +
+            "linear-gradient(to bottom, rgb(148 163 184 / 0.14) 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
+          maskImage: "radial-gradient(ellipse 80% 60% at 30% 0%, black 40%, transparent 100%)",
+          WebkitMaskImage: "radial-gradient(ellipse 80% 60% at 30% 0%, black 40%, transparent 100%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent"
+      />
+
+      <div className="relative z-10 container mx-auto px-4 py-24 sm:py-28 lg:py-36">
+        <div className="max-w-4xl">
+          <p className="mb-6 text-xs font-medium uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">
+            Container OTA for edge fleets
+          </p>
+
+          <h1 className="text-4xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl leading-[1.08]">
+            Make <span className="text-blue-600 dark:text-blue-400">{platforms}</span> {subheadline}
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+            {support}
+          </p>
         </div>
-      </WavyBackground>
+      </div>
     </section>
   )
 }
