@@ -8,10 +8,8 @@ import { motion } from "motion/react"
 
 export default function SiteHeader({
   ctaPrimaryHref = "/marketplace",
-  ctaSecondaryHref = "https://app.streamdeploy.com/signin",
 }: {
   ctaPrimaryHref?: string
-  ctaSecondaryHref?: string
 }) {
   const [open, setOpen] = useState(false)
 
@@ -83,21 +81,17 @@ export default function SiteHeader({
               </Button>
             </motion.div>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
+            <div>
               <Button
-                asChild
+                disabled
                 variant="outline"
-                className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 hover:text-blue-700 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/30 dark:hover:text-blue-300 bg-white/80"
+                aria-label="Start Deploying \u2014 deprecated"
+                title="StreamDeploy has been discontinued. This site is preserved as a showcase."
+                className="border-2 border-gray-300 text-gray-400 dark:border-gray-700 dark:text-gray-500 bg-white/60 dark:bg-neutral-900/60 cursor-not-allowed"
               >
-                <Link href={ctaSecondaryHref} aria-label="Start Deploying">
-                  Start Deploying
-                </Link>
+                Deprecated
               </Button>
-            </motion.div>
+            </div>
           </div>
         </nav>
 
@@ -192,13 +186,13 @@ export default function SiteHeader({
                 </Link>
               </Button>
               <Button
-                asChild
+                disabled
                 variant="outline"
-                className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 hover:text-blue-700 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/30 flex-1 bg-white/80"
+                aria-label="Start Deploying \u2014 deprecated"
+                title="StreamDeploy has been discontinued. This site is preserved as a showcase."
+                className="border-2 border-gray-300 text-gray-400 dark:border-gray-700 dark:text-gray-500 flex-1 bg-white/60 dark:bg-neutral-900/60 cursor-not-allowed"
               >
-                <Link href={ctaSecondaryHref} onClick={() => setOpen(false)}>
-                  Start Deploying
-                </Link>
+                Deprecated
               </Button>
             </motion.div>
           </div>

@@ -35,7 +35,8 @@ export default function ContactPage() {
               </CardContent>
             </Card>
             <p className="mt-4 text-center text-xs text-gray-600 dark:text-gray-400">
-              By submitting, you agree to receive communications from StreamDeploy. You can unsubscribe at any time.
+              StreamDeploy has been discontinued. This page is preserved as a showcase and no longer
+              accepts submissions.
             </p>
           </div>
         </div>
@@ -46,7 +47,7 @@ export default function ContactPage() {
           <p className="text-sm text-gray-600 dark:text-gray-300">
             {"© "} {new Date().getFullYear()} StreamDeploy. All rights reserved.
           </p>
-          <div className="text-xs text-gray-600 dark:text-gray-400">We’ll respond within one business day.</div>
+          <div className="text-xs text-gray-600 dark:text-gray-400">Archived showcase — no longer operating.</div>
         </div>
       </footer>
     </main>

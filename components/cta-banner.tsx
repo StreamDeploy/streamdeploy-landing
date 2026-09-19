@@ -123,21 +123,17 @@ export default function CtaBanner({
               </Button>
             </motion.div>
             
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <Button 
-                asChild 
-                variant="secondary" 
-                className="bg-white/10 text-white hover:bg-white/20 border border-white/20 font-semibold backdrop-blur-sm"
+            <div>
+              <Button
+                disabled
+                variant="secondary"
+                aria-label="Deploy Now \u2014 deprecated"
+                title="StreamDeploy has been discontinued. This site is preserved as a showcase."
+                className="bg-white/5 text-white/60 border border-white/20 font-semibold backdrop-blur-sm cursor-not-allowed"
               >
-                <a href="http://app.streamdeploy/signin" aria-label="Deploy Now">
-                  Deploy Now
-                </a>
+                Deprecated
               </Button>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
